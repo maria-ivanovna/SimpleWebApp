@@ -1,4 +1,4 @@
-package entities;
+package entities.withDataBase;
 
 public class DBUser {
     private int id;
@@ -9,9 +9,17 @@ public class DBUser {
         this.name = name;
         this.pass = pass;
     }
+    public DBUser(int id, String name){
+        this.name = name;
+        this.id = id;
+    }
 
     public String getName() {
         return name;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setName(String name) {
@@ -25,4 +33,6 @@ public class DBUser {
     public void setPass(String pass) {
         this.pass = pass;
     }
+
+
 }
