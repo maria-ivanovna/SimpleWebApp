@@ -15,8 +15,8 @@ import java.io.IOException;
 public class DBAddServ  extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/DBjsp/DBAddUser.jsp");
-        dispatcher.forward(req, resp);
+          RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/DBjsp/DBAddUser.jsp");
+          dispatcher.forward(req, resp);
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

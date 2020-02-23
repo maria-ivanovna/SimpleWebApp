@@ -1,0 +1,34 @@
+.popup_fast {
+	width: 290px;
+	height: 150px;
+	background: #f5eee1;
+	z-index: 100;
+	padding: 23px 0 0 27px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: none;
+}
+
+.popup_fast.active {
+	display: block;
+}
+
+.popup_fast h3 {
+	font-size: 26px;
+	color: #483c36;
+	font-weight: bold;
+}
+
+.bg_popup {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+}

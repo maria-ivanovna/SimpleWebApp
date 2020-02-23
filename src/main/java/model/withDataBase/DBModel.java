@@ -55,7 +55,8 @@ public class DBModel {
                         if(resultSet.next()){
                             int id = resultSet.getInt(1);
                             String name = resultSet.getString(2);
-                            dbUser = new DBUser(id, name);
+                            String pass = resultSet.getString(3);
+                            dbUser = new DBUser(id, name, pass);
                         }
                     }
                 }

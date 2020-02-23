@@ -12,11 +12,13 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles/w3.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <title>USERS LIST</title>
 </head>
     <body class="w3-light-grey">
         <div class="w3-container w3-blue-grey w3-opacity w3-right-align">
-            <h1>My App</h1>
+            <h1>MY APP WITH DB</h1>
         </div>
             <div class="w3-container w3-center w3-margin-bottom w3-padding">
                 <div class="w3-card-4">
@@ -42,8 +44,32 @@
                 </div>
             </div>
         <div class="w3-container w3-center w3-grey w3-opacity  w3-padding">
-            <button class="w3-btn w3-hover-green w3-round-large" onclick="location.href='/SimpleWebApp'">EDIT ELEMENT</button>
-            <button class="w3-btn w3-hover-green w3-round-large" onclick="location.href='/SimpleWebApp'">SELECT ONE</button>
-        </div>                                                                                                                                          
+            <button class="w3-btn w3-hover-green w3-round-large" onclick="location.href='/SimpleWebApp/DBAdd'">ADD ELEMENT</button>
+            <button class="btn w3-btn w3-hover-green w3-round-large open_fast">EDIT</button>
+            <button class="w3-btn w3-hover-green w3-round-large" onclick="location.href='/SimpleWebApp'">DELETE</button>
+            <button class="btn w3-btn w3-hover-green w3-round-large open_fast">EDIT</button>
+            <button class="w3-btn w3-round-large" onclick="location.href='/SimpleWebApp/DBIndex.html'">Back to main</button>
+        </div>
+        <script>
+            $('.open_fast').click(function () {
+                $('.popup_fast').css({'top': $(window).scrollTop()+100}).fadeIn();
+                $('.bg_popup').fadeIn();
+
+                $('.bg_popup').click(function () {
+                    $('.popup_fast').fadeOut();
+                    $('.bg_popup').fadeOut();
+                });
+            });
+        </script>
+        <div class="popup_fast w3-round-large">
+            <h3>Edit form</h3>
+            <div class="form">
+                <form method="post">
+                    <input type="text" name="editId" class="input_name w3-round-large" placeholder="Edit ID">
+                    <button type="submit" class="btn w3-round-large w3-green">ENTER</button>
+                </form>
+            </div>
+        </div>
+        <div class="bg_popup"></div>
     </body>
 </html>

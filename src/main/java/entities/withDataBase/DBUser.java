@@ -14,6 +14,12 @@ public class DBUser {
         this.id = id;
     }
 
+    public DBUser(int id, String name, String pass) {
+        this.id = id;
+        this.name = name;
+        this.pass = pass;
+    }
+
     public String getName() {
         return name;
     }
