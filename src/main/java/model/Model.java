@@ -20,6 +20,7 @@ public class Model {
         model.add(user);
     }
     public List<String> getlist(){
-        return model.stream().map(User::getName).collect(Collectors.toList());
+        return model.stream().map(User::getName)
+                .collect(Collectors.toList());
     }
 }

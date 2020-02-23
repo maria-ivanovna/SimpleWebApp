@@ -17,7 +17,7 @@ public class ProductsServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         try{
-            String url = "jdbc:postgresql://localhost:5432/postgresql_user";
+            String url = "jdbc:postgresql://localhost:5432/userlist";
             String username = "postgresql_user";
             String password = "4149";
             Class.forName("org.postgresql.Driver").getDeclaredConstructor().newInstance();
